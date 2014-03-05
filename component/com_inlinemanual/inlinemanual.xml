@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+	<name>Inline Manual</name>
+	<creationDate>February 2014</creationDate>
+	<author>Vojtěch Kusý</author>
+	<authorEmail>vojta@inlinemanual.com</authorEmail>
+	<authorUrl>http://inlinemanual.com</authorUrl>
+	<copyright>(C) 2014 InlineManual Ltd. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>0.0.1</version>
+	<description>COM_INLINEMANUAL_XML_DESCRIPTION</description>
+
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+
+  <administration>
+    <menu link="option=com_inlinemanual" img="class:inlinemanual">InlineManual</menu>
+		<files folder="admin">
+      <filename>index.html</filename>
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>inlinemanual.php</filename>
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>models</folder>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <folder>lib</folder>
+		</files>
+    <languages folder="admin">
+      <language tag="en-GB">language/en-GB/en-GB.com_inlinemanual.ini</language>
+      <language tag="en-GB">language/en-GB/en-GB.com_inlinemanual.sys.ini</language>
+    </languages>
+	</administration>
+
+</extension>
+
